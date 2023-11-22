@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="StyleCad.css">
+    <title>Cadastro</title>
+    <style>
+      body {
+          margin: 0;
+          background-color: #808080;;
+          font-family: Arial, sans-serif;
+          color: #fff;
+      }
+
+
+      body:hover {
+          background-color: #393836; 
+      }
+      .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto 1fr;
+            grid-gap: 20px;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cadastro {
+          text-align: center;
+          width: 50%;
+          margin: 0 auto;
+          background-color: rgb(53, 49, 61); 
+          padding: 5px; 
+          margin-bottom: 10px;
+          border-radius: 10px; 
+        }
+      form {
+          width: 50%;
+          margin: auto;
+          background-color: rgb(53, 49, 61); 
+          padding: 30px; 
+          border-radius: 10px; 
+      }
+
+      label {
+          display: block;
+          margin-bottom: 10px;
+      }
+
+      input, select, textarea {
+          width: 100%;
+          padding: 8px;
+          margin-bottom: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+      }
+
+      input[type="submit"] {
+          background-color: #000;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          padding: 10px 20px;
+          cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+          background-color: #333;
+      }
+  </style>
+
+</head>
+<body>
+  <div class="center-container">
+<div class="cadastro">
+        <h1>Cadastro</h1>
+    </div>
+
+  <div class="right-login">
+      <form action="cadastro.php" method="post">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required>
+
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="senha">Senha:</label>
+          <input type="password" id="senha" name="senha" required>
+
+          <label for="confirmar_senha">Confirmar senha:</label>
+          <input type="password" id="confirmar_senha" name="confirmar_senha" required>
+
+          <label for="telefone">Telefone:</label>
+          <input type="tel" id="telefone" name="telefone">
+
+          <label for="endereco">Endereço:</label>
+          <textarea id="endereco" name="endereco"></textarea>
+
+          <button type="submit" id="cadastrarButton">Cadastrar</button>
+      </form>
+  </div>
+
+  <script>
+      const cadastrarButton = document.getElementById("cadastrarButton");
+      const body = document.body;
+
+      cadastrarButton.addEventListener("click", function () {
+          body.style.backgroundColor = "#00008B"; 
+      });
+  </script>
+</body>
+</html>
